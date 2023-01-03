@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    font-family: 'Jua';
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.wrap {
+padding: 10px;
+height: 100%;
+}
+
+h1 {
+height: 70px;
+/* border: 7px solid #C8DBBE; */
+margin-bottom: 10px;
+background-color: #C8DBBE;
+border-radius: 10px;
+font-size: 2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+main {
+display: flex;
+height: calc(100% - 100px);
+flex-flow: row wrap;
+}
+
+.side-bar {
+/* border: 5px solid #EDE4E0; */
+background-color: #EDE4E0;
+border-radius: 10px;
+width: 120px;
+display: flex;
+flex-direction: column;
+padding: 10px;
+font-size: 20px;
+float: left;
+margin-right: 10px;
+}
+
+.side-bar span {
+padding: 10px;
+}
+
+.side-bar span:first-of-type {
+color: #9F8772;
+}
+
+.cat {
+display: flex;
+flex: 1;
+border-radius: 10px;
+border: 5px solid #9F8772;
+flex-wrap : wrap;
+
+
+}
+
+.cat div {
+width: 200px;
+height: 230px;
+background-color: #F0EBCE;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-wrap: wrap;
+flex-grow: 0;
+margin: 10px;
+border-radius: 10px;
+
+}
+
+.cat img {
+width: 170px;
+height: 130px;
+margin-bottom: 15px;
+object-fit: cover;
+border-radius: 10px;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+     .cat div { background-color: #AA8B56;
+    }
+}
+
+@media (max-width: 767px) {
+      .cat div { background-color: #4E6C50; 
+    }
+}
