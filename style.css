@@ -12,9 +12,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    min-width:320px;
 }
-
-
 
 .wrap {
 padding: 10px;
@@ -36,21 +35,24 @@ align-items: center;
 main {
 display: flex;
 height: calc(100% - 100px);
-flex-flow: row wrap;
+flex-flow: row nowrap;
+align-content: center;
+justify-content: center;
 }
 
 .side-bar {
 /* border: 5px solid #EDE4E0; */
+display: flex;
+flex-flow: column nowrap;
+flex-shrink: 0;
 background-color: #EDE4E0;
 border-radius: 10px;
 width: 120px;
-display: flex;
-flex-direction: column;
 padding: 10px;
-font-size: 20px;
-float: left;
+font-size: 1.2rem;
 margin-right: 10px;
 }
+
 
 .side-bar span {
 padding: 10px;
@@ -63,9 +65,11 @@ color: #9F8772;
 .cat {
 display: flex;
 flex: 1;
+flex-flow: row wrap;
 border-radius: 10px;
 border: 5px solid #9F8772;
-flex-wrap : wrap;
+overflow-y: scroll;
+
 }
 
 .cat div {
@@ -73,11 +77,10 @@ width: 200px;
 height: 230px;
 background-color: #F0EBCE;
 display: flex;
+flex-flow: column nowrap;
 justify-content: center;
 align-items: center;
-flex-direction: column;
-flex-wrap: wrap;
-flex-grow: 0;
+
 margin: 10px;
 border-radius: 10px;
 
@@ -90,7 +93,6 @@ margin-bottom: 15px;
 object-fit: cover;
 border-radius: 10px;
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
      .cat div { background-color: #AA8B56;
